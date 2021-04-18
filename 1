@@ -1,0 +1,52 @@
+#添加库
+import selenium
+import pyautogui
+import time
+from selenium import webdriver
+import pyperclip
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver import ActionChains
+
+
+
+option = webdriver.ChromeOptions()
+option.add_argument(r"user-data-dir=C:\Users\weiwulun\AppData\Local\Google\Chrome\User Data1")
+browser = webdriver.Chrome(options=option)
+
+#browser = webdriver.Chrome()#定义浏览器为chrome
+url = f'https://docs.qq.com/sheet/DWEFCTXdETEN6SWp5?tab=BB08J2'#定义访问网址     {内为之前定义的变量hero}
+bb = u'18233015112'
+cc = u'36.1'
+dd = u'白班'
+
+browser.get(url)#打开之前定义的网址
+browser.maximize_window()#最大化浏览器
+browser.implicitly_wait(10)#最大等待时间
+time.sleep(3)
+
+pyperclip.copy(bb)
+pyautogui.hotkey('ctrl', 'f')
+pyautogui.hotkey('ctrl', 'v')
+time.sleep(1)
+pyautogui.press('esc')
+pyautogui.press('left')
+pyautogui.press('left')
+pyautogui.press('left')
+pyautogui.press('left')
+pyautogui.press('left')
+pyautogui.press('left')
+pyperclip.copy(cc)
+pyautogui.hotkey('ctrl', 'v')
+time.sleep(1)
+pyautogui.press('tab')
+pyautogui.hotkey('ctrl', 'v')
+time.sleep(1)
+pyautogui.press('tab')
+pyperclip.copy(dd)
+pyautogui.hotkey('ctrl', 'v')
+time.sleep(1)
+pyautogui.press('tab')
+pyautogui.press('tab')
+pyautogui.press('tab')
