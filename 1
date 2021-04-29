@@ -1,4 +1,12 @@
-#添加库
+#!/usr/bin/python
+#-*-coding:utf-8-*-
+import sys
+import os
+#curPath = os.path.abspath(os.path.dirname(__file__))
+#rootPath = os.path.split(curPath)[0]
+#sys.path.append(rootPath)
+#sys.path.append("/home/pi/.local/lib/python3.7/site-packages/pyautogui")
+sys.path.append("/home/pi/.local/lib/python2.7/site-packages (1.8.2)")
 import selenium
 import pyautogui
 import time
@@ -10,43 +18,192 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 
 
+def qqexcel():
+    option = webdriver.ChromeOptions()
+    option.add_argument(r"user-data-dir=C:\Users\weiwulun\AppData\Local\Google\Chrome\User Data1")
+    browser = webdriver.Chrome(options=option)
 
-option = webdriver.ChromeOptions()
-option.add_argument(r"user-data-dir=C:\Users\weiwulun\AppData\Local\Google\Chrome\User Data1")
-browser = webdriver.Chrome(options=option)
 
-#browser = webdriver.Chrome()#定义浏览器为chrome
-url = f'https://docs.qq.com/sheet/DWEFCTXdETEN6SWp5?tab=BB08J2'#定义访问网址     {内为之前定义的变量hero}
-bb = u'18233015112'
-cc = u'36.1'
-dd = u'白班'
+    url = f'https://docs.qq.com/sheet/DWEFCTXdETEN6SWp5?tab=BB08J2'
+    bb = u'182********'
+    cc = u'36.1'
+    dd = u'白班'
 
-browser.get(url)#打开之前定义的网址
-browser.maximize_window()#最大化浏览器
-browser.implicitly_wait(10)#最大等待时间
-time.sleep(3)
+    browser.get(url)#打开之前定义的网址
+    browser.maximize_window()#最大化浏览器
+    browser.implicitly_wait(30)#最大等待时间
+    time.sleep(10)
 
-pyperclip.copy(bb)
-pyautogui.hotkey('ctrl', 'f')
-pyautogui.hotkey('ctrl', 'v')
-time.sleep(1)
-pyautogui.press('esc')
-pyautogui.press('left')
-pyautogui.press('left')
-pyautogui.press('left')
-pyautogui.press('left')
-pyautogui.press('left')
-pyautogui.press('left')
-pyperclip.copy(cc)
-pyautogui.hotkey('ctrl', 'v')
-time.sleep(1)
-pyautogui.press('tab')
-pyautogui.hotkey('ctrl', 'v')
-time.sleep(1)
-pyautogui.press('tab')
-pyperclip.copy(dd)
-pyautogui.hotkey('ctrl', 'v')
-time.sleep(1)
-pyautogui.press('tab')
-pyautogui.press('tab')
-pyautogui.press('tab')
+    #pyperclip.copy(bb)
+    pyautogui.keyDown('ctrl')
+    time.sleep(0.5)
+    pyautogui.press('left')
+    pyautogui.press('left')
+    pyautogui.press('left')
+    pyautogui.press('left')
+    time.sleep(1)
+    pyautogui.press('up')
+    pyautogui.press('up')
+    pyautogui.press('up')
+    pyautogui.press('up')
+    time.sleep(0.5)
+    pyautogui.keyUp('ctrl')
+    time.sleep(5)
+
+
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+
+    time.sleep(0.5)
+
+    time.sleep(0.5)
+    pyautogui.press('right')
+    time.sleep(0.5)
+    pyautogui.press('right')
+    time.sleep(0.5)
+    pyautogui.press('right')
+    time.sleep(0.5)
+    pyautogui.press('right')
+    time.sleep(0.5)
+    pyautogui.press('right')
+    time.sleep(0.5)
+
+
+    pyperclip.copy(cc)
+    pyautogui.hotkey('ctrl', 'v')
+    time.sleep(2)
+    pyautogui.press('tab')
+    time.sleep(1)
+    pyautogui.hotkey('ctrl', 'v')
+    time.sleep(2)
+    pyautogui.press('tab')
+    time.sleep(1)
+    pyperclip.copy(dd)
+    time.sleep(2)
+    pyautogui.hotkey('ctrl', 'v')
+    time.sleep(3)
+    pyautogui.press('tab')
+    time.sleep(1)
+    pyautogui.press('tab')
+    time.sleep(1)
+    pyautogui.press('tab')
+    time.sleep(1)
+    pyautogui.press('tab')
+    time.sleep(10)
+    
+    
+    
+    #haidong
+
+    
+    cc = u'36.2'
+    dd = u'白班'
+
+    
+    time.sleep(5)
+
+    #pyperclip.copy(bb)
+    pyautogui.keyDown('ctrl')
+    time.sleep(0.5)
+    pyautogui.press('left')
+    pyautogui.press('left')
+    pyautogui.press('left')
+    pyautogui.press('left')
+    time.sleep(1)
+    pyautogui.press('up')
+    pyautogui.press('up')
+    pyautogui.press('up')
+    pyautogui.press('up')
+    time.sleep(0.5)
+    pyautogui.keyUp('ctrl')
+    time.sleep(5)
+
+    pyautogui.press('down')
+    time.sleep(0.5)
+    pyautogui.press('down')
+    time.sleep(0.5)
+
+    time.sleep(0.5)
+
+    time.sleep(0.5)
+    pyautogui.press('right')
+    time.sleep(0.5)
+    pyautogui.press('right')
+    time.sleep(0.5)
+    pyautogui.press('right')
+    time.sleep(0.5)
+    pyautogui.press('right')
+    time.sleep(0.5)
+    pyautogui.press('right')
+    time.sleep(0.5)
+
+
+    pyperclip.copy(cc)
+    pyautogui.hotkey('ctrl', 'v')
+    time.sleep(2)
+    pyautogui.press('tab')
+    time.sleep(1)
+    pyautogui.hotkey('ctrl', 'v')
+    time.sleep(2)
+    pyautogui.press('tab')
+    time.sleep(1)
+    pyperclip.copy(dd)
+    time.sleep(2)
+    pyautogui.hotkey('ctrl', 'v')
+    time.sleep(3)
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    time.sleep(10)
+    browser.quit()
+
+while True:
+    print ('开始执行')
+    time.sleep(1)
+    qqexcel()
+    time.sleep(1)
+    
+    print ('填写完毕睡眠1小时')
+    time.sleep(3600)
+    print ('睡眠结束')
+    time.sleep(1)
+    
